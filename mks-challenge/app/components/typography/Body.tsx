@@ -1,13 +1,22 @@
 'use client';
+import { HTMLAttributes } from 'react';
 import styled from 'styled-components';
 
-export const Body = styled.p`
+interface PProps extends HTMLAttributes<HTMLParagraphElement> {
+  fontWeight?: 400 | 600 | 700;
+}
+
+const BodyWrapper: React.FC<PProps> = ({ className, children }) => {
+  return <p className={className}>{children}</p>;
+};
+
+export const Body = styled(BodyWrapper)`
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
 `;
 
-export const BoldBody = styled.p`
+export const BoldBody = styled(BodyWrapper)`
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;

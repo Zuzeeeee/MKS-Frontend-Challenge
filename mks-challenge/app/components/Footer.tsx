@@ -8,6 +8,7 @@ const FooterContainer = styled.footer`
   background-color: #eeeeee;
   width: 100%;
   justify-content: center;
+  padding: 10px 0px 10px 0px;
 `;
 
 const Footer = () => {

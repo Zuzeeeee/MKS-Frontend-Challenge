@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { Heading } from '@/app/components/typography/Heading';
+import { Heading1 } from '@/app/components/typography/Heading';
 import { Subtitle } from '@/app/components/typography/Subtitle';
 import styled from 'styled-components';
 import { BoldBody } from '@/app/components/typography/Body';
@@ -20,7 +20,9 @@ const HeaderContainer = styled.header`
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  padding: 20px 0px 20px 0px;
+  margin-bottom: 10px;
+  flex: 0 1 auto;
 `;
 
 const Button = styled.button`
@@ -31,20 +33,22 @@ const Button = styled.button`
   min-width: 80px;
   border-radius: 10px;
   background-color: #ffffff;
+  padding: 5px 0px 5px 0px;
 `;
 
 interface HeaderProps {
   totalItems: number;
+  onOpen: () => void;
 }
 
-const Header = ({ totalItems }: HeaderProps) => {
+const Header = ({ totalItems, onOpen }: HeaderProps) => {
   return (
     <HeaderContainer>
       <Row>
-        <Heading>mks</Heading>
+        <Heading1 fontWeight={600}>mks</Heading1>
         <Subtitle>sistemas</Subtitle>
       </Row>
-      <Button>
+      <Button onClick={() => onOpen()}>
         <Image
           width='18'
           height='18'
