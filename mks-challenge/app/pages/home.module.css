@@ -1,0 +1,20 @@
+.title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 19px;
+  text-transform: capitalize;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  color: white;
+}
