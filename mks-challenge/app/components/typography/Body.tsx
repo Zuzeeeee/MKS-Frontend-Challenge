@@ -11,13 +11,7 @@ const BodyWrapper: React.FC<PProps> = ({ className, children }) => {
 };
 
 export const Body = styled(BodyWrapper)`
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-`;
-
-export const BoldBody = styled(BodyWrapper)`
-  font-weight: 700;
+  font-weight: ${(props) => props.fontWeight ?? 400};
   font-size: 12px;
   line-height: 15px;
 `;

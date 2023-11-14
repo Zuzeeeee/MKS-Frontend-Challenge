@@ -3,14 +3,14 @@ import Image from 'next/image';
 import { Heading1 } from '@/app/components/typography/Heading';
 import { Subtitle } from '@/app/components/typography/Subtitle';
 import styled from 'styled-components';
-import { BoldBody } from '@/app/components/typography/Body';
+import { Body } from '@/app/components/typography/Body';
 
 const Row = styled.div`
   display: flex;
   flex-direction: row;
   align-items: baseline;
   color: white;
-  padding-left: 20px;
+  padding-left: 2em;
 `;
 
 const HeaderContainer = styled.header`
@@ -20,20 +20,20 @@ const HeaderContainer = styled.header`
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0px 20px 0px;
+  padding: 2em 0px 2em 0px;
   margin-bottom: 10px;
   flex: 0 1 auto;
 `;
 
 const Button = styled.button`
   display: flex;
-  margin-right: 20px;
+  margin-right: 2em;
   justify-content: space-evenly;
   align-items: center;
   min-width: 80px;
   border-radius: 10px;
   background-color: #ffffff;
-  padding: 5px 0px 5px 0px;
+  padding: 1em 0px 1em 0px;
 `;
 
 interface HeaderProps {
@@ -55,7 +55,7 @@ const Header = ({ totalItems, onOpen }: HeaderProps) => {
           src={'/shopping_cart.svg'}
           alt={'shopping_cart'}
         ></Image>
-        <BoldBody>{totalItems}</BoldBody>
+        <Body fontWeight={700}>{totalItems}</Body>
       </Button>
     </HeaderContainer>
   );

@@ -1,15 +1,17 @@
 export interface ProductData {
-  products: {
-    id: number;
-    name: string;
-    brand: string;
-    description: string;
-    photo: string;
-    price: string;
-    createdAt: string;
-    updatedAt: string;
-  }[];
+  products: Product[];
   count: number;
+}
+
+export interface Product {
+  id: number;
+  name: string;
+  brand: string;
+  description: string;
+  photo: string;
+  price: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export const getProductData = async (): Promise<ProductData> => {

@@ -1,5 +1,5 @@
 'use client';
-import ProductCard from '@/app/components/ProductCard';
+import ProductCard from '@/app/components/product/ProductCard';
 import styles from './productlist.module.css';
 import styled from 'styled-components';
 import { useQuery } from '@tanstack/react-query';
@@ -19,6 +19,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   margin: 0px 5% 0px 5%;
   justify-content: center;
+  max-width: 1000px;
   align-items: center;
 `;
 
